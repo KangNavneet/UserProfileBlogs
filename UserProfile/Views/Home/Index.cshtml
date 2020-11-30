@@ -5,7 +5,8 @@
 
 
     IList<BlogModel> blogs = new List<BlogModel>();
-    UserDetails aa = new UserDetails {
+    UserDetails aa = new UserDetails
+    {
 
         userName = "Pickachu",
         alias = "pickachuAlias",
@@ -18,33 +19,37 @@
 
     blogs.Add(new BlogModel
     {
-        Name = "Pickachu",
-        Content ="Corona in Peel Region",
-        Slug="Covid"
+        Name = "Who",
+        Author = new UserDetails { userName = "Pickachu", email = "pickachu@gmail.com" },
+        Content = "Corona in Peel Region",
+        Slug = "Covid"
     });
     blogs.Add(new BlogModel
     {
-        Name = "Tom",
+        Name = "Food",
+        Author = new UserDetails { userName = "Tom", email = "tom@gmail.com" },
+        Content = "New Outlet Starbuck Got Opened",
+        Slug = "GDP"
+    });
+
+    blogs.Add(new BlogModel
+    {
+        Name = "Health",
+        Author = new UserDetails { userName = "Jerry", email = "jerry@gmail.com" },
         Content = "Corona in Peel Region",
         Slug = "Covid"
     });
 
+
     blogs.Add(new BlogModel
     {
-        Name = "Jerry",
-        Content = "Corona in Peel Region",
+        Name = "WorldBank",
+        Author = new UserDetails { userName = "Tweety", email = "tweety@gmail.com" },
+        Content = "",
         Slug = "Covid"
     });
 
 
-    blogs.Add(new BlogModel
-    {
-        Name = "Tweety",
-        Content = "Corona in Peel Region",
-        Slug = "Covid"
-    });
-
-   
 
 
 
@@ -56,3 +61,4 @@
 </div>
 
 
+@(await Html.RenderComponentAsync<BlogList>(RenderMode.ServerPrerendered, new BlogList { ModelList = blogs }))

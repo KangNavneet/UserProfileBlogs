@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KfW5S6nXn9cB6mBIEC2GIMZXtvUxIXFqHlhmq7TfLs+AOko8t/fvPx/Iqmbgvp6/aVc82vtHfj3di+6rUIhdFw==",
+  "dgSpecHash": "U/K9tloPv33D79mVEG5PzqQOtMXq43qjd1Ay9cn5B/kEfEbf8M/zjnNRayGVXEvHTCVbGTfCdtmzDTL2gyW2DA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\navne\\source\\repos\\userProfileNavneetMVC\\BlogComponents\\BlogComponents.csproj",
+  "projectFilePath": "C:\\Users\\navne\\source\\repos\\UserProfileBlogs\\BlogComponents\\BlogComponents.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\navne\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.9\\microsoft.aspnetcore.authorization.3.1.9.nupkg.sha512",
     "C:\\Users\\navne\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.9\\microsoft.aspnetcore.components.3.1.9.nupkg.sha512",

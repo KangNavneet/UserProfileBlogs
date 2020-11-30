@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QwnrsMlhe72OYHk3dIZ4zSMMqX81ZAEayBJvcaU60lUrOeOhXGcdvXYAKcP+0zP4x/mEZ5Mb7xM2TMIsb9IwFw==",
+  "dgSpecHash": "UN5nuoBvgHQt5Q2YerozYP5Bb8y5d+ql85C4b/TwzCmhNNaNiaY/QH7ekdj6K50vVDswESvpScTO+nzBJvCQCw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\navne\\source\\repos\\userProfileNavneetMVC\\UserProfile\\UserProfile.csproj",
+  "projectFilePath": "C:\\Users\\navne\\source\\repos\\UserProfileBlogs\\UserProfile\\UserProfile.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\navne\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\navne\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.0.0\\microsoft.aspnetcore.jsonpatch.3.0.0.nupkg.sha512",

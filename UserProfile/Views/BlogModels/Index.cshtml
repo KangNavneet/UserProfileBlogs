@@ -1,76 +1,7 @@
-﻿@using UserProfile.Views.Components
-@model IEnumerable<UserProfile.Models.BlogModel>
+﻿@model IEnumerable<UserProfile.Models.BlogModel>
 
 @{
     ViewData["Title"] = "Index";
-    IList<BlogModel> blogs = new List<BlogModel>();
-    UserDetails aa = new UserDetails
-    {
-        userName = "Tom",
-        alias = "tomAlias",
-        website = "tom.ca",
-        socialUrl = "friends.com/tom",
-        email = "tom@gmail.com",
-        dob = DateTime.Parse("1989-2-12"),
-    };
-    blogs.Add(new BlogModel {
-
-        Name ="Blog A",
-        Content ="Blog A Content" ,
-        Slug = "Covid"
-
-
-
-    });
-
-
-    blogs.Add(new BlogModel
-    {
-
-        Name = "Blog A",
-        Content = "Blog A Content",
-        Slug = "Covid"
-
-
-
-    });
-
-
-    blogs.Add(new BlogModel
-    {
-
-        Name = "Blog B",
-        Content = "Blog A Content",
-        Slug = "Covid"
-
-
-
-    });
-
-
-
-    blogs.Add(new BlogModel
-    {
-
-        Name = "Blog C",
-        Content = "Blog A Content",
-        Slug = "Covid"
-
-
-
-    });
-
-
-    blogs.Add(new BlogModel
-    {
-
-        Name = "Blog D",
-        Content = "Blog A Content",
-        Slug = "Covid"
-
-
-
-    });
 }
 
 <h1>Index</h1>
@@ -115,4 +46,4 @@
         }
     </tbody>
 </table>
-@(await Html.RenderComponentAsync<BlogList>(RenderMode.ServerPrerendered, new BlogList { ModelList = blogs }))
+
