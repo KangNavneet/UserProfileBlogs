@@ -1,0 +1,58 @@
+﻿@using UserProfile.Views.Components
+
+@{
+    ViewData["Title"] = "Home Page";
+
+
+    IList<BlogModel> blogs = new List<BlogModel>();
+    UserDetails aa = new UserDetails {
+
+        userName = "Pickachu",
+        alias = "pickachuAlias",
+        website = "pickachu.ca",
+        socialUrl = "friends.com/pickachu",
+        email = "pickachu@gmail.com",
+        dob = DateTime.Parse("1989-3-12"),
+
+    };
+
+    blogs.Add(new BlogModel
+    {
+        Name = "Pickachu",
+        Content ="Corona in Peel Region",
+        Slug="Covid"
+    });
+    blogs.Add(new BlogModel
+    {
+        Name = "Tom",
+        Content = "Corona in Peel Region",
+        Slug = "Covid"
+    });
+
+    blogs.Add(new BlogModel
+    {
+        Name = "Jerry",
+        Content = "Corona in Peel Region",
+        Slug = "Covid"
+    });
+
+
+    blogs.Add(new BlogModel
+    {
+        Name = "Tweety",
+        Content = "Corona in Peel Region",
+        Slug = "Covid"
+    });
+
+   
+
+
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+

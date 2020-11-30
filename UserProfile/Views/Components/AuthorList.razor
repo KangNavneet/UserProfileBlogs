@@ -1,0 +1,31 @@
+﻿
+@using UserProfile.Models
+<h3>AuthorList</h3>
+
+    <table>
+    @foreach (UserDetails author in ModelList)
+    {
+        <tr>
+            <th>@author.userName</th>
+
+            foreach (BlogModel blog in author.Blogs)
+            {
+
+            <td>@author.email</td>
+
+            }
+        </tr>
+
+    }
+
+
+
+</table>
+
+@code {
+
+    [Parameter]
+    public IEnumerable<UserDetails> ModelList { get; set; }
+
+
+}
