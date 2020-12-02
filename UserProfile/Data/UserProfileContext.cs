@@ -32,7 +32,7 @@ namespace UserProfile.Data
         public DbSet<UserDetails> UserDetails { get; set; }
         public DbSet<SocialDetails> SocialDetails{ get; set; }
         public DbSet<BlogModel> BlogDetails { get; set; }
-        public DbSet<UserProfile.Models.BlogPost> BlogPost { get; set; }
+        
 
 
 

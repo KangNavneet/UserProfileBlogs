@@ -2,21 +2,23 @@
 @using UserProfile.Models
 <h3>AuthorList</h3>
 
-    <table>
-    @foreach (UserDetails author in ModelList)
+<table class="table table-light">
+    @foreach (BlogModel blogs in ModelList)
     {
-        <tr>
-            <th>@author.userName</th>
+    <tr>
+       
 
-            foreach (BlogModel blog in author.Blogs)
-            {
 
-            <td>@author.email</td>
-
-            }
+        <td>@blogs.Blogs</td>
+        <td>@blogs.Name</td>
+        <td>@blogs.Slug</td>
+        <td>@blogs.Content</td>
+        
         </tr>
 
-    }
+           
+
+        }
 
 
 
@@ -25,7 +27,10 @@
 @code {
 
     [Parameter]
-    public IEnumerable<UserDetails> ModelList { get; set; }
+    public IEnumerable<BlogModel> ModelList { get; set; }
+  
+    
+
 
 
 }

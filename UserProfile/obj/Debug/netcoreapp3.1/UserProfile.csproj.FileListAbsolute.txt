@@ -724,11 +724,6 @@ C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1
 C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\Components\AuthorList.razor.g.cs
 C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\Components\BlogList.razor.g.cs
 C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\_Import.razor.g.cs
-C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\BlogPosts\Create.cshtml.g.cs
-C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\BlogPosts\Delete.cshtml.g.cs
-C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\BlogPosts\Details.cshtml.g.cs
-C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\BlogPosts\Edit.cshtml.g.cs
-C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\BlogPosts\Index.cshtml.g.cs
 C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
@@ -763,3 +758,5 @@ C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1
 C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\BlogModels\Details.cshtml.g.cs
 C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\BlogModels\Edit.cshtml.g.cs
 C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\BlogModels\Index.cshtml.g.cs
+C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\RazorDeclaration\Views\Components\SingleBlog.razor.g.cs
+C:\Users\navne\source\repos\UserProfileBlogs\UserProfile\obj\Debug\netcoreapp3.1\Razor\Views\Components\SingleBlog.razor.g.cs

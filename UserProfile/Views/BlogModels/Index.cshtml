@@ -1,4 +1,6 @@
-﻿@model IEnumerable<UserProfile.Models.BlogModel>
+﻿@using UserProfile.Views.Components
+
+@model IEnumerable<UserProfile.Models.BlogModel>
 
 @{
     ViewData["Title"] = "Index";
@@ -47,3 +49,5 @@
     </tbody>
 </table>
 
+
+@(await Html.RenderComponentAsync<AuthorList>(RenderMode.ServerPrerendered, new AuthorList { ModelList = Model }))

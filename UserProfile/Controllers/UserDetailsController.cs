@@ -20,6 +20,8 @@ namespace UserProfile.Controllers
         }
          
         // GET: UserDetails
+
+        
         public async Task<IActionResult> Index(string searchString)
         {
             var userDetails = from m in _context.UserDetails
@@ -30,6 +32,8 @@ namespace UserProfile.Controllers
                 userDetails = userDetails.Where(s => s.userName.Contains(searchString));
             }
 
+            //AUTHOR MODEL REFERENCE IN BLOGMODEL CONTROLLER----NOTE I HAVE INCLUDED INCLUDE
+            //return View(await userDetails.Include(p => p.Blogs).ToListAsync()); //IN BLOG CONTROLLER
             return View(await userDetails.ToListAsync());
         }
 

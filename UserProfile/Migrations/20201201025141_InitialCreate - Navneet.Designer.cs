@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UserProfile.Data;
 
 namespace UserProfile.Migrations
 {
     [DbContext(typeof(UserProfileContext))]
-    partial class UserProfileContextModelSnapshot : ModelSnapshot
+    [Migration("20201201025141_InitialCreate - Navneet")]
+    partial class InitialCreateNavneet
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
