@@ -15,16 +15,16 @@ namespace UserProfile.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.10")
+                .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "5.0.0");
 
             modelBuilder.Entity("UserProfile.Models.BlogModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<int?>("AuthorId")
                         .HasColumnType("int");
@@ -50,7 +50,7 @@ namespace UserProfile.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<int?>("UserDetailsId")
                         .HasColumnType("int");
@@ -78,15 +78,15 @@ namespace UserProfile.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .UseIdentityColumn();
 
                     b.Property<int?>("BlogModelId")
                         .HasColumnType("int");
 
                     b.Property<string>("alias")
                         .IsRequired()
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.Property<DateTime>("dob")
                         .HasColumnType("datetime2");
@@ -97,18 +97,18 @@ namespace UserProfile.Migrations
 
                     b.Property<string>("socialUrl")
                         .IsRequired()
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.Property<string>("userName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.Property<string>("website")
                         .IsRequired()
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.HasKey("Id");
 
@@ -120,8 +120,10 @@ namespace UserProfile.Migrations
             modelBuilder.Entity("UserProfile.Models.BlogModel", b =>
                 {
                     b.HasOne("UserProfile.Models.UserDetails", "Author")
-                        .WithMany()
+                        .WithMany("Blogs")
                         .HasForeignKey("AuthorId");
+
+                    b.Navigation("Author");
                 });
 
             modelBuilder.Entity("UserProfile.Models.SocialDetails", b =>
@@ -136,6 +138,18 @@ namespace UserProfile.Migrations
                     b.HasOne("UserProfile.Models.BlogModel", null)
                         .WithMany("Blogs")
                         .HasForeignKey("BlogModelId");
+                });
+
+            modelBuilder.Entity("UserProfile.Models.BlogModel", b =>
+                {
+                    b.Navigation("Blogs");
+                });
+
+            modelBuilder.Entity("UserProfile.Models.UserDetails", b =>
+                {
+                    b.Navigation("Blogs");
+
+                    b.Navigation("userToSocialFK");
                 });
 #pragma warning restore 612, 618
         }

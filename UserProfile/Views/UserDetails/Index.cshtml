@@ -86,3 +86,11 @@
         }
     </tbody>
 </table>
+
+@if (User.Identity.IsAuthenticated)
+{
+
+    @(await Html.RenderComponentAsync<AuthorList>(RenderMode.ServerPrerendered, new  { ModelList = Model, Url = "/BlogModels/Details" }))
+}
+
+

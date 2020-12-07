@@ -50,4 +50,10 @@
 </table>
 
 
-@(await Html.RenderComponentAsync<AuthorList>(RenderMode.ServerPrerendered, new AuthorList { ModelList = Model }))
+@if (User.Identity.IsAuthenticated)
+{
+    @(await Html.RenderComponentAsync<BlogList>(RenderMode.ServerPrerendered, new BlogList { ModelList = Model }))
+
+}
+
+

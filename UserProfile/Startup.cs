@@ -29,6 +29,7 @@ namespace UserProfile
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages(); 
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
             services.AddServerSideBlazor();
@@ -59,7 +60,7 @@ namespace UserProfile
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -69,6 +70,7 @@ namespace UserProfile
                     pattern: "{controller=Home}/{action=Index}/{id?}");
 
                 endpoints.MapBlazorHub();
+                endpoints.MapRazorPages();
             });
         }
     }

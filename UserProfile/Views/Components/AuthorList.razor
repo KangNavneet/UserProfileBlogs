@@ -1,20 +1,25 @@
 ﻿
 @using UserProfile.Models
+@using UserProfile.Views.Components
 <h3>AuthorList</h3>
 
 <table class="table table-light">
-    @foreach (BlogModel blogs in ModelList)
+ 
+    @foreach (UserDetails author in ModelList)
     {
     <tr>
-       
+        <th>@author.userName</th>
+        @foreach (BlogModel blog in author.Blogs)
+        {
+            // <td>@blog.Name</td>
+            <td><SingleBlog Blog="@blog" Url="@Url" /></td>
+        }
+
+        <!---HERE WANTED TO PLACE ANOTHER FOR EACH BUT I HAVE DIFFERENT BLOGS WITH USERNAME REFERENCE in THE USERDETAILS TABLE---PLEASE HAVE A LOOK ON TABLE-->
 
 
-        <td>@blogs.Blogs</td>
-        <td>@blogs.Name</td>
-        <td>@blogs.Slug</td>
-        <td>@blogs.Content</td>
-        
-        </tr>
+
+    </tr>
 
            
 
@@ -27,10 +32,9 @@
 @code {
 
     [Parameter]
-    public IEnumerable<BlogModel> ModelList { get; set; }
-  
-    
-
+    public IEnumerable<UserDetails> ModelList { get; set; }
+    [Parameter]
+    public string Url { get; set; }
 
 
 }

@@ -62,5 +62,9 @@
 
 
 
+@if (User.Identity.IsAuthenticated)
+{
+    @(await Html.RenderComponentAsync<BlogList>(RenderMode.ServerPrerendered, new BlogList { ModelList = blogs }))
 
-@(await Html.RenderComponentAsync<BlogList>(RenderMode.ServerPrerendered, new BlogList { ModelList = blogs }))
+}
+

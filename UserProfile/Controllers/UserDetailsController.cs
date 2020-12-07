@@ -33,8 +33,8 @@ namespace UserProfile.Controllers
             }
 
             //AUTHOR MODEL REFERENCE IN BLOGMODEL CONTROLLER----NOTE I HAVE INCLUDED INCLUDE
-            //return View(await userDetails.Include(p => p.Blogs).ToListAsync()); //IN BLOG CONTROLLER
-            return View(await userDetails.ToListAsync());
+            return View(await userDetails.Include(p => p.Blogs).ToListAsync()); //IN BLOG CONTROLLER
+            //return View(await userDetails.ToListAsync());
         }
 
         // GET: UserDetails/Details/5

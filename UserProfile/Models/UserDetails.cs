@@ -48,7 +48,8 @@ namespace UserProfile.Models
        [Newtonsoft.Json.JsonIgnore]
         
         public ICollection<SocialDetails>userToSocialFK { get; set; }
-       
+        public ICollection<BlogModel> Blogs { get; set; }
+
 
     }
 }
